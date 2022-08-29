@@ -11,18 +11,22 @@ categories = ["game-engines", "rendering"]
 resolver = "2"
 
 [dependencies]
-bevy = { version = "0.8", default-features = false, features = [
+bevy = {git = "https://github.com/paxsethorld/bevy-fork.git", branch = "local-0-8-release", default-features = false, features = [
     "render",
     "bevy_asset",
-] }
+]}
+# bevy = { version = "0.8", default-features = false, features = [
+#     "render",
+#     "bevy_asset",
+# ] }
 
-[dev-dependencies]
-bevy = { version = "0.8", default-features = false, features = [
-    "bevy_scene",
-    "bevy_winit",
-    "x11",
-] }
-criterion = "0.3"
+# [dev-dependencies]
+# bevy = { version = "0.8", default-features = false, features = [
+#     "bevy_scene",
+#     "bevy_winit",
+#     "x11",
+# ] }
+# criterion = "0.3"
 
 [[bench]]
 name = "ray_mesh_intersection"
